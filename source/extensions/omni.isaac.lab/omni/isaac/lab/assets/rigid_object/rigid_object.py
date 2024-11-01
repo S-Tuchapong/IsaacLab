@@ -54,6 +54,9 @@ class RigidObject(AssetBase):
         Args:
             cfg: A configuration instance.
         """
+        if hasattr(cfg, "spawn") and hasattr(cfg.spawn, "articulation_props"):
+            # The USD could contain an articulation root, but we only want to spawn the rigid body.
+            cfg.spawn.articulation_props.articulation_enabled = False
         super().__init__(cfg)
 
     """
