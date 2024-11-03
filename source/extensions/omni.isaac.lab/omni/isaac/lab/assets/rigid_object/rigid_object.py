@@ -23,6 +23,9 @@ from .rigid_object_data import RigidObjectData
 if TYPE_CHECKING:
     from .rigid_object_cfg import RigidObjectCfg
 
+# #custom
+# from collections import defaultdict
+
 
 class RigidObject(AssetBase):
     """A rigid object asset class.
@@ -55,6 +58,8 @@ class RigidObject(AssetBase):
             cfg: A configuration instance.
         """
         super().__init__(cfg)
+        # self._external_force_b = defaultdict()
+        # self._external_torque_b = defaultdict()
 
     """
     Properties
