@@ -9,15 +9,18 @@
             "linux": {
                 "command": "${workspaceFolder}/isaaclab.sh -p ${workspaceFolder}/.vscode/tools/setup_vscode.py"
             },
-            "problemMatcher": [
-                "$python"
-            ]
+            "windows": {
+                "command": "${workspaceFolder}/isaaclab.bat -p ${workspaceFolder}/.vscode/tools/setup_vscode.py"
+            }
         },
         {
             "label": "run_formatter",
             "type": "shell",
             "linux": {
                 "command": "${workspaceFolder}/isaaclab.sh --format"
+            },
+            "windows": {
+                "command": "${workspaceFolder}/isaaclab.bat --format"
             }
         }
     ]

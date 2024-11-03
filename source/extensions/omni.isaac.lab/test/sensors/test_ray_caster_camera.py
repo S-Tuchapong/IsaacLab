@@ -131,7 +131,7 @@ class TestWarpCamera(unittest.TestCase):
             # check image data
             for im_data in camera.data.output.to_dict().values():
                 self.assertEqual(
-                    im_data.shape, (1, self.camera_cfg.pattern_cfg.height, self.camera_cfg.pattern_cfg.width)
+                    im_data.shape, (1, self.camera_cfg.pattern_cfg.height, self.camera_cfg.pattern_cfg.width, 1)
                 )
 
     def test_camera_resolution(self):
@@ -148,7 +148,9 @@ class TestWarpCamera(unittest.TestCase):
         camera.update(self.dt)
         # access image data and compare shapes
         for im_data in camera.data.output.to_dict().values():
-            self.assertTrue(im_data.shape == (1, self.camera_cfg.pattern_cfg.height, self.camera_cfg.pattern_cfg.width))
+            self.assertTrue(
+                im_data.shape == (1, self.camera_cfg.pattern_cfg.height, self.camera_cfg.pattern_cfg.width, 1)
+            )
 
     def test_camera_init_offset(self):
         """Test camera initialization with offset using different conventions."""
@@ -289,7 +291,7 @@ class TestWarpCamera(unittest.TestCase):
             for cam in [cam_1, cam_2]:
                 for im_data in cam.data.output.to_dict().values():
                     self.assertEqual(
-                        im_data.shape, (1, self.camera_cfg.pattern_cfg.height, self.camera_cfg.pattern_cfg.width)
+                        im_data.shape, (1, self.camera_cfg.pattern_cfg.height, self.camera_cfg.pattern_cfg.width, 1)
                     )
 
     def test_camera_set_world_poses(self):
@@ -402,7 +404,7 @@ class TestWarpCamera(unittest.TestCase):
             print("----------------------------------------")
             # Check image data
             for im_data in camera.data.output.values():
-                self.assertEqual(im_data.shape, (1, camera_cfg.pattern_cfg.height, camera_cfg.pattern_cfg.width))
+                self.assertEqual(im_data.shape, (1, camera_cfg.pattern_cfg.height, camera_cfg.pattern_cfg.width, 1))
 
     def test_output_equal_to_usdcamera(self):
         camera_pattern_cfg = patterns.PinholeCameraPatternCfg(
@@ -814,6 +816,15 @@ class TestWarpCamera(unittest.TestCase):
             rtol=5e-3,
             atol=1e-4,
         )
+
+    def test_sensor_print(self):
+        """Test sensor print is working correctly."""
+        # Create sensor
+        sensor = RayCasterCamera(cfg=self.camera_cfg)
+        # Play sim
+        self.sim.reset()
+        # print info
+        print(sensor)
 
 
 if __name__ == "__main__":

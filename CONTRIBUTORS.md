@@ -28,35 +28,53 @@ Guidelines for modifications:
 * Mayank Mittal
 * Nikita Rudin
 * Pascal Roth
+* Sheikh Dawood
 
 ## Contributors
 
-* Anton Bjørndahl Mortensen
 * Alice Zhou
+* Amr Mousa
 * Andrej Orsula
+* Anton Bjørndahl Mortensen
 * Antonio Serrano-Muñoz
 * Arjun Bhardwaj
 * Brayden Zhang
 * Calvin Yu
 * Chenyu Yang
+* David Yang
+* Dorsa Rohani
+* Felix Yu
+* Gary Lvov
+* Giulio Romualdi
 * HoJin Jeon
+* Jan Kerner
+* Jean Tampon
 * Jia Lin Yuan
+* Jinghuan Shang
 * Jingzhou Liu
 * Johnson Sun
+* Kaixi Bao
 * Kourosh Darvish
+* Lionel Gulich
+* Louis Le Lay
 * Lorenz Wellhausen
 * Masoud Moghani
 * Michael Gussert
 * Muhong Guo
 * Nuralem Abizov
 * Özhan Özen
+* Qian Wan
 * Qinxi Yu
 * René Zurbrügg
 * Ritvik Singh
 * Rosario Scalise
+* Ryley McCarroll
 * Shafeef Omar
 * Vladimir Fokow
+* Wei Yang
 * Xavier Nal
+* Yang Jin
+* Yujian Zhang
 * Zhengyu Zhang
 * Ziqi Fan
 
